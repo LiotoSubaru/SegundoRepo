@@ -1,0 +1,125 @@
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ touch alumno1.py alumno2.py alumno3.py readme.md
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git status *.py
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        alumno1.py
+        alumno2.py
+        alumno3.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git add *.py
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git add readme.md
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git commit -m "add alumno 1,2,3"
+[master (root-commit) 6dc3775] add alumno 1,2,3
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 alumno1.py
+ create mode 100644 alumno2.py
+ create mode 100644 alumno3.py
+ create mode 100644 readme.md
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git add readme.md
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git commit -m "add readme"
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git commit -m "add saludo"
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   alumno1.py
+        modified:   alumno2.py
+        modified:   alumno3.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git add *.py
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git commit -m "saludo"
+[master dad1f1d] saludo
+ 3 files changed, 3 insertions(+)
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git add alumno3.py
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git rm --checked alumno3.py
+error: unknown option `checked'
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git rm --cached alumno3.py
+rm 'alumno3.py'
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    alumno3.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        alumno3.py
+
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git checkout alumno3.py
+error: pathspec 'alumno3.py' did not match any file(s) known to git
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git checkout .
+Updated 0 paths from the index
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git checkout
+D       alumno3.py
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$ git checkout SegundoRepo
+error: pathspec 'SegundoRepo' did not match any file(s) known to git
+
+johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
+$
+
