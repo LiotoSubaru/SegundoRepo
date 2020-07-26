@@ -1,5 +1,10 @@
+
+SE CREA LOS ARCHIVOS ALUMNO1,2,3.py y README.MD
+
 johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
 $ touch alumno1.py alumno2.py alumno3.py readme.md
+
+CON ESTE COMANDO SE REVISA EL ESTADO DE LOS ARCHIVOS .py
 
 johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
 $ git status *.py
@@ -15,11 +20,14 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
+CON ESTE COMANDO SE AGREGAN EN SEGUIMIENTO LOS ARCHIVOS 
 johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
 $ git add *.py
 
 johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
 $ git add readme.md
+
+CON ESTE COMANDO SE HACE COMMIT AGREGANDO LOS ARCHIVOS
 
 johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
 $ git commit -m "add alumno 1,2,3"
@@ -33,13 +41,7 @@ $ git commit -m "add alumno 1,2,3"
 johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
 $ git add readme.md
 
-johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
-$ git commit -m "add readme"
-On branch master
-Your branch is based on 'origin/master', but the upstream is gone.
-  (use "git branch --unset-upstream" to fixup)
-
-nothing to commit, working tree clean
+SE HACEN CAMBIOS AGREGAN PRINT SALUDO Y AL INTENTAR HACER UN COMMIT SE NOS INFORMA QUE NO SE AGREGARON EN SEGUIMIENTO LOS ARCHIVOS ALUMNO1,2,3.py
 
 johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
 $ git commit -m "add saludo"
@@ -56,6 +58,8 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
+AQUI AGREGAMOS EN SEGUIMIENTO
+
 johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
 $ git add *.py
 
@@ -67,21 +71,7 @@ $ git commit -m "saludo"
 johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
 $ git add alumno3.py
 
-johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
-$ git rm --checked alumno3.py
-error: unknown option `checked'
-usage: git rm [<options>] [--] <file>...
-
-    -n, --dry-run         dry run
-    -q, --quiet           do not list removed files
-    --cached              only remove from the index
-    -f, --force           override the up-to-date check
-    -r                    allow recursive removal
-    --ignore-unmatch      exit with a zero status even if nothing matched
-    --pathspec-from-file <file>
-                          read pathspec from file
-    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
-
+CON ESTE COMANDO SE ELIMINA EL ARCHIVO ALUMNO3.py
 
 johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
 $ git rm --cached alumno3.py
@@ -101,14 +91,7 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
         alumno3.py
 
-
-johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
-$ git checkout alumno3.py
-error: pathspec 'alumno3.py' did not match any file(s) known to git
-
-johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
-$ git checkout .
-Updated 0 paths from the index
+AQUI SE NOS INFORMA QUE FUE BORRADO EL ARCHIVO
 
 johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
 $ git checkout
@@ -116,10 +99,9 @@ D       alumno3.py
 Your branch is based on 'origin/master', but the upstream is gone.
   (use "git branch --unset-upstream" to fixup)
 
-johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
-$ git checkout SegundoRepo
-error: pathspec 'SegundoRepo' did not match any file(s) known to git
+El cual después fue restaurado utilizando los siguientes comandos
 
-johan@LAPTOP-CT8T34L2 MINGW64 ~/21 Intersemestral/SegundoRepo (master)
-$
-
+git restore --staged alumno3.py
+git add alumno3.py
+git commit -m "se agrego alumno3.py"
+git push
